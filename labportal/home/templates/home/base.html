@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link type="image/png" sizes="32x32" rel="icon" href="{% static 'img/favicon.png' %}">
+
+    {% block title %}
+    {% endblock %} 
+        
+</head>
+<body>
+    <header>
+        <nav class="topnav">            
+            <a class="active" href="/">Home</a>
+            <a href="/lab-rules">Lab Rules</a>                        
+        </nav>
+        <h1 class="top-header">Lab Portal</h1>
+        <hr>
+    </header>        
+    
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
