@@ -5,4 +5,29 @@
 {% endblock %}
 
 {% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Exam Duration</th>
+            <th>Subject Name</th>
+            <th>Exam Name</th>
+            <th>Faculty Name</th>
+            <th>File</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in exam_data %}
+        <tr>
+            <td>{{item.date}}</td>
+            <td>{{item.time}}</td>
+            <td>{{item.subject_name}}</td>
+            <td>{{item.exam_name}}</td>
+            <td>{{item.faculty_name}}</td>          
+            <td><a target="_blank" href="/media/{{item.file_upload}}">Download</a></td>
+        </tr>           
+        {% endfor %} 
+    </tbody>
+</table>
+
 {% endblock %}

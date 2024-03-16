@@ -1,0 +1,20 @@
+{% extends 'labexam/base.html' %}
+
+{% block title %}
+<title>Create Exam | Lab Exam</title>
+{% endblock %}
+
+{% block content %}
+<h2 style="text-align: center;">Create Exam</h2>
+<div class="exp_upload">
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            {% csrf_token %}
+    
+            {{ form.as_p }}
+    
+            <input type="submit" name="" id="" value="Submit">
+        </fieldset>        
+    </form>
+</div>
+{% endblock %}
